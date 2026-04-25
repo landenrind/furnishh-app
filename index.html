@@ -10,7 +10,6 @@ const SUPA_URL = 'https://hyfvlnhhiufjosopleoc.supabase.co';
 const SUPA_KEY = 'sb_publishable_HsAqFwDfefG4WfLfsW9BIQ_y9gS1IXp';
 let _authToken = localStorage.getItem('furnishh_token');
 let _userId = localStorage.getItem('furnishh_uid');
-
 async function supaReq(method, path, body) {
   const headers = {'Content-Type':'application/json','apikey':SUPA_KEY,'Prefer':'return=representation'};
   if(_authToken) headers['Authorization']='Bearer '+_authToken;
@@ -31,7 +30,6 @@ async function supaReq(method, path, body) {
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
 body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-height:100vh;max-width:430px;margin:0 auto;}
-
 /* AUTH */
 .auth-wrap{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:40px 28px;}
 .auth-logo{font-family:var(--serif);font-size:36px;margin-bottom:6px;}
@@ -45,7 +43,6 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
 .auth-btn:disabled{opacity:.4;cursor:not-allowed;}
 .auth-error{font-size:13px;color:var(--red);margin-top:10px;text-align:center;}
 .auth-note{font-size:12px;color:var(--muted);text-align:center;margin-top:16px;line-height:1.6;}
-
 /* APP */
 .app-wrap{display:none;}
 .top-bar{background:var(--warm);border-bottom:1px solid var(--border);padding:14px 20px 10px;position:sticky;top:0;z-index:100;display:flex;justify-content:space-between;align-items:flex-end;}
@@ -59,7 +56,6 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
 .tab-icon{font-size:17px;display:block;margin-bottom:1px;}
 .tab-label{font-size:10px;color:var(--muted);font-weight:500;}
 .tab.active .tab-label{color:var(--charcoal);}
-
 /* SHARED */
 .section-title{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;padding:4px 20px 10px;}
 .badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.04em;}
@@ -71,7 +67,6 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
 .empty-title{font-family:var(--serif);font-size:18px;margin-bottom:6px;}
 .empty-sub{font-size:13px;color:var(--muted);line-height:1.6;}
 .loading-screen{text-align:center;padding:80px 24px;color:var(--muted);font-size:14px;}
-
 /* DASHBOARD */
 .metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 20px;}
 .metric-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:13px;}
@@ -88,7 +83,6 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
 .activity-item{background:var(--card);margin:0 20px 8px;border-radius:12px;border:1px solid var(--border);padding:11px 13px;display:flex;align-items:center;gap:11px;cursor:pointer;}
 .athumb{width:42px;height:42px;border-radius:9px;background:var(--cream);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;overflow:hidden;}
 .athumb img{width:100%;height:100%;object-fit:cover;border-radius:9px;}
-
 /* INVENTORY */
 .search-bar{padding:12px 20px;}
 .search-input{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:10px;font-family:var(--sans);font-size:14px;background:var(--card);color:var(--charcoal);outline:none;}
@@ -99,7 +93,6 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
 .inv-item:active{transform:scale(.98);}
 .ithumb{width:54px;height:54px;border-radius:9px;background:var(--cream);flex-shrink:0;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:20px;}
 .ithumb img{width:100%;height:100%;object-fit:cover;}
-
 /* ADD ITEM */
 .add-screen{padding:18px 20px 120px;}
 .add-title{font-family:var(--serif);font-size:22px;margin-bottom:5px;}
@@ -123,12 +116,10 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
 .loading-bar{height:3px;background:var(--border);border-radius:2px;margin:6px 0 12px;overflow:hidden;display:none;}
 .loading-bar.show{display:block;}
 .loading-inner{height:100%;background:var(--green);border-radius:2px;width:0%;transition:width .4s ease;}
-
 /* EXPENSES */
 .exp-screen{padding:16px 20px 120px;}
 .exp-item{background:var(--card);margin-bottom:9px;border-radius:13px;border:1px solid var(--border);padding:12px 14px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;}
 .exp-amount{font-size:15px;font-weight:600;color:var(--red);}
-
 /* P&L */
 .pl-screen{padding:16px 20px 120px;}
 .pl-period{display:flex;gap:7px;margin-bottom:16px;overflow-x:auto;}
@@ -144,7 +135,6 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
 .bar-lrow{display:flex;justify-content:space-between;margin-bottom:4px;}
 .bar-track{height:6px;background:var(--cream);border-radius:3px;overflow:hidden;}
 .bar-fill{height:100%;border-radius:3px;}
-
 /* MODALS */
 .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:300;display:none;align-items:flex-end;max-width:430px;margin:0 auto;left:50%;transform:translateX(-50%);width:100%;}
 .modal-overlay.show{display:flex;}
@@ -160,7 +150,6 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
 .mbtn{flex:1;padding:11px;border-radius:10px;border:1px solid var(--border);font-family:var(--sans);font-size:13px;font-weight:500;cursor:pointer;background:var(--card);color:var(--charcoal);}
 .mbtn.danger{color:var(--red);border-color:var(--red-l);background:var(--red-l);}
 .mbtn.primary{background:var(--charcoal);color:#fff;border-color:var(--charcoal);}
-
 .toast{position:fixed;bottom:88px;left:50%;transform:translateX(-50%);background:var(--charcoal);color:#fff;padding:9px 18px;border-radius:20px;font-size:13px;font-weight:500;z-index:500;opacity:0;transition:opacity .2s;white-space:nowrap;}
 .toast.show{opacity:1;}
 .sync-indicator{font-size:11px;color:var(--muted);text-align:center;padding:4px;display:none;}
@@ -168,7 +157,6 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
 </style>
 </head>
 <body>
-
 <!-- AUTH SCREEN -->
 <div id="authWrap" class="auth-wrap">
   <div class="auth-logo">Furnishh</div>
@@ -213,7 +201,7 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
       </div>
       <div class="metric-card">
         <div class="mlabel">Avg margin</div>
-        <div class="mvalue" style="font-size:18px;" id="d-margin">â</div>
+        <div class="mvalue" style="font-size:18px;" id="d-margin">—</div>
         <div class="msub" style="color:rgba(255,255,255,0)">.</div>
       </div>
       <div class="metric-card">
@@ -246,18 +234,17 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
   <!-- ADD ITEM -->
   <div class="screen" id="screen-add">
     <div class="add-screen">
-
       <!-- STEP 1: CAMERA -->
       <div id="step-camera">
         <div class="add-title">Add new item</div>
-        <div class="add-sub">Take a photo â AI does the rest</div>
+        <div class="add-sub">Take a photo — AI does the rest</div>
         <input type="file" id="photoInput" accept="image/*" capture="environment" style="display:none" onchange="handlePhoto(this)">
         <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
           <button class="save-btn" style="background:var(--green);border:none;font-size:16px;padding:18px;border-radius:16px;" onclick="document.getElementById('photoInput').click()">
-            ð· &nbsp;Take photo
+            📷 &nbsp;Take photo
           </button>
           <button class="save-btn" style="background:var(--card);color:var(--charcoal);border:1px solid var(--border);font-size:15px;" onclick="document.getElementById('photoInputGallery').click()">
-            ð¼ &nbsp;Choose from library
+            🖼 &nbsp;Choose from library
           </button>
           <input type="file" id="photoInputGallery" accept="image/*" style="display:none" onchange="handlePhoto(this)">
         </div>
@@ -265,62 +252,48 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
           AI will identify the piece, suggest a name,<br>category, and market price automatically.
         </div>
       </div>
-
       <!-- STEP 2: AI ANALYZING -->
       <div id="step-analyzing" style="display:none;text-align:center;padding:40px 0;">
-        <div style="font-size:42px;margin-bottom:16px;">ð</div>
+        <div style="font-size:42px;margin-bottom:16px;">✨</div>
         <div style="font-family:var(--serif);font-size:20px;margin-bottom:8px;">Analyzing photo...</div>
         <div style="font-size:13px;color:var(--muted);margin-bottom:24px;">AI is identifying the piece</div>
         <div class="loading-bar show" style="display:block;"><div class="loading-inner" id="loadingInner" style="width:0%;"></div></div>
       </div>
-
       <!-- STEP 3: REVIEW CARD -->
       <div id="step-review" style="display:none;">
         <div style="font-family:var(--serif);font-size:20px;margin-bottom:4px;">Looks good?</div>
-        <div style="font-size:13px;color:var(--muted);margin-bottom:14px;">AI filled this in â edit anything before saving</div>
-
+        <div style="font-size:13px;color:var(--muted);margin-bottom:14px;">AI filled this in — edit anything before saving</div>
         <img id="photoPreview" style="width:100%;max-height:200px;object-fit:cover;border-radius:14px;margin-bottom:14px;display:none;">
-
         <div style="background:var(--blue-l);border:1px solid #C8DCF2;border-radius:11px;padding:11px 13px;margin-bottom:14px;">
-          <div style="font-size:10px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px;">â¦ AI identified</div>
+          <div style="font-size:10px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px;">✦ AI identified</div>
           <div style="font-size:13px;color:var(--charcoal);line-height:1.5;" id="aiText"></div>
         </div>
-
         <div class="form-group"><label class="form-label">Item name</label><input class="form-input" id="itemName" placeholder="e.g. Velvet accent chair"></div>
-
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:13px;">
           <div>
             <label class="form-label">Suggested price</label>
             <input class="form-input" id="itemPrice" type="number" placeholder="0" oninput="calcMargin()">
           </div>
           <div>
-            <label class="form-label" style="color:var(--red);">What you paid â</label>
+            <label class="form-label" style="color:var(--red);">What you paid →</label>
             <input class="form-input" id="itemCost" type="number" placeholder="0" oninput="calcMargin()" style="border-color:var(--red);background:var(--red-l);">
           </div>
         </div>
-
         <div class="margin-prev" id="marginPrev" style="display:none;"><span style="font-size:13px;color:var(--green);font-weight:500;">Gross margin</span><span style="font-family:var(--serif);font-size:18px;color:var(--green);" id="marginNum">0%</span></div>
-
         <div class="form-group"><label class="form-label">Source</label><div class="chip-group" id="sourceG"><div class="chip-opt selected" onclick="sel(this,'sourceG')">Wholesale</div><div class="chip-opt" onclick="sel(this,'sourceG')">Auction</div><div class="chip-opt" onclick="sel(this,'sourceG')">Estate sale</div><div class="chip-opt" onclick="sel(this,'sourceG')">Other</div></div></div>
-
         <div class="form-group"><label class="form-label">Category</label><div class="chip-group" id="catG"><div class="chip-opt selected" onclick="sel(this,'catG')">Seating</div><div class="chip-opt" onclick="sel(this,'catG')">Tables</div><div class="chip-opt" onclick="sel(this,'catG')">Storage</div><div class="chip-opt" onclick="sel(this,'catG')">Decor</div><div class="chip-opt" onclick="sel(this,'catG')">Rugs</div><div class="chip-opt" onclick="sel(this,'catG')">Lighting</div><div class="chip-opt" onclick="sel(this,'catG')">Other</div></div></div>
-
         <div class="form-group"><label class="form-label">Status</label><div class="chip-group" id="statusG"><div class="chip-opt selected" onclick="sel(this,'statusG')">In stock</div><div class="chip-opt" onclick="sel(this,'statusG')">On hold</div><div class="chip-opt" onclick="sel(this,'statusG')">Sold</div></div></div>
-
         <div class="form-group"><label class="form-label">Notes (optional)</label><input class="form-input" id="itemNotes" placeholder="Condition, color, dimensions..."></div>
-
         <button class="save-btn" id="saveItemBtn" onclick="saveItem()" style="background:var(--green);font-size:16px;padding:16px;">
-          â &nbsp;Save to inventory
+          ✓ &nbsp;Save to inventory
         </button>
         <button class="save-btn" onclick="resetAdd()" style="background:transparent;color:var(--muted);border:1px solid var(--border);margin-top:8px;">
-          â Retake photo
+          ↺ Retake photo
         </button>
         <div class="sync-indicator" id="syncIndicator">Saving to cloud...</div>
       </div>
-
     </div>
-      <div class="sync-indicator" id="syncIndicator">Saving to cloud...</div>
-    </div>
+    <div class="sync-indicator" id="syncIndicator">Saving to cloud...</div>
   </div>
 
   <!-- EXPENSES -->
@@ -340,7 +313,7 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
           <div class="msub" style="color:var(--muted);">total</div>
         </div>
       </div>
-      <button class="save-btn" onclick="openExpModal()" style="margin-bottom:16px;">ï¼ Add expense</button>
+      <button class="save-btn" onclick="openExpModal()" style="margin-bottom:16px;">+ Add expense</button>
       <div class="section-title">All expenses</div>
       <div id="expList"><div class="loading-screen">Loading...</div></div>
     </div>
@@ -360,13 +333,13 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
         <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">Revenue</div>
         <div class="pl-row"><span class="pl-key">Gross sales</span><span class="pl-val" style="color:var(--green);" id="pl-rev">$0</span></div>
         <div class="pl-row"><span class="pl-key muted">Items sold</span><span class="pl-val" style="color:var(--muted);" id="pl-sold">0</span></div>
-        <div class="pl-row"><span class="pl-key muted">Avg sale price</span><span class="pl-val" style="color:var(--muted);" id="pl-avg">â</span></div>
+        <div class="pl-row"><span class="pl-key muted">Avg sale price</span><span class="pl-val" style="color:var(--muted);" id="pl-avg">—</span></div>
       </div>
       <div class="pl-card">
         <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">Cost of goods sold</div>
         <div class="pl-row"><span class="pl-key">Inventory cost</span><span class="pl-val" style="color:var(--red);" id="pl-cogs">$0</span></div>
         <div class="pl-row"><span class="pl-key muted">Gross profit</span><span class="pl-val" style="color:var(--green);" id="pl-gp">$0</span></div>
-        <div class="pl-row"><span class="pl-key muted">Gross margin</span><span class="pl-val" style="color:var(--muted);" id="pl-gm">â</span></div>
+        <div class="pl-row"><span class="pl-key muted">Gross margin</span><span class="pl-val" style="color:var(--muted);" id="pl-gm">—</span></div>
       </div>
       <div class="pl-card">
         <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:10px;">Operating expenses</div>
@@ -389,11 +362,11 @@ body{font-family:var(--sans);background:var(--cream);color:var(--charcoal);min-h
 
   <!-- TABS -->
   <div class="tab-bar">
-    <button class="tab active" onclick="switchTab('dash',this)"><span class="tab-icon">â</span><span class="tab-label">Dashboard</span></button>
-    <button class="tab" onclick="switchTab('inv',this)"><span class="tab-icon">â°</span><span class="tab-label">Inventory</span></button>
-    <button class="tab" onclick="switchTab('add',this)"><span class="tab-icon">ï¼</span><span class="tab-label">Add item</span></button>
-    <button class="tab" onclick="switchTab('exp',this)"><span class="tab-icon">â</span><span class="tab-label">Expenses</span></button>
-    <button class="tab" onclick="switchTab('pl',this)"><span class="tab-icon">â</span><span class="tab-label">P&amp;L</span></button>
+    <button class="tab active" onclick="switchTab('dash',this)"><span class="tab-icon">⌂</span><span class="tab-label">Dashboard</span></button>
+    <button class="tab" onclick="switchTab('inv',this)"><span class="tab-icon">▰</span><span class="tab-label">Inventory</span></button>
+    <button class="tab" onclick="switchTab('add',this)"><span class="tab-icon">+</span><span class="tab-label">Add item</span></button>
+    <button class="tab" onclick="switchTab('exp',this)"><span class="tab-icon">↓</span><span class="tab-label">Expenses</span></button>
+    <button class="tab" onclick="switchTab('pl',this)"><span class="tab-icon">≡</span><span class="tab-label">P&amp;L</span></button>
   </div>
 </div>
 
@@ -511,7 +484,7 @@ function showApp() {
   document.getElementById('authWrap').style.display='none';
   document.getElementById('appWrap').style.display='block';
   const name = currentUser.email.split('@')[0];
-  document.getElementById('userLabel').textContent = name+' Â· Sign out';
+  document.getElementById('userLabel').textContent = name+' · Sign out';
   setGreeting(name);
   loadData();
 }
@@ -578,7 +551,7 @@ function renderDash(){
   document.getElementById('d-invVal').textContent=fmt(totalVal);
   document.getElementById('d-invCount').textContent=inStock.length+' item'+(inStock.length!==1?'s':'')+' in stock';
   document.getElementById('d-cost').textContent=fmt(totalCost);
-  document.getElementById('d-margin').textContent=avgM!==null?avgM+'%':'â';
+  document.getElementById('d-margin').textContent=avgM!==null?avgM+'%':'—';
   document.getElementById('d-rev30').textContent=fmt(rev30);
   document.getElementById('d-soldCount').textContent=sold30.length+' sold';
   document.getElementById('d-profit30').textContent=fmt(profit30);
@@ -586,8 +559,8 @@ function renderDash(){
   document.getElementById('d-profitSub').textContent=profit30<0?'loss this period':'after expenses';
   const recent=[...inventory].slice(0,6);
   const el=document.getElementById('d-recent');
-  if(!recent.length){el.innerHTML='<div class="empty-state"><div class="empty-icon">ðï¸</div><div class="empty-title">No inventory yet</div><div class="empty-sub">Tap Add to log your first piece.</div></div>';return;}
-  el.innerHTML=recent.map(i=>`<div class="activity-item" onclick="openItemModal('${i.id}')"><div class="athumb">${i.photo_url?'<img src="'+i.photo_url+'">':`ðª`}</div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px;">${i.name}</div><div style="font-size:11px;color:var(--muted);">${i.category||''} Â· ${daysAgo(i.added_at)}</div><span class="badge badge-${bc(i.status)}">${i.status}</span></div><div style="text-align:right;flex-shrink:0;"><div style="font-size:13px;font-weight:600;color:var(--green);">${fmt(i.price)}</div><div style="font-size:11px;color:var(--muted);">${i.cost&&i.price?pct(i.cost,i.price)+'% margin':''}</div></div></div>`).join('');
+  if(!recent.length){el.innerHTML='<div class="empty-state"><div class="empty-icon">🛋️</div><div class="empty-title">No inventory yet</div><div class="empty-sub">Tap Add to log your first piece.</div></div>';return;}
+  el.innerHTML=recent.map(i=>`<div class="activity-item" onclick="openItemModal('${i.id}')"><div class="athumb">${i.photo_url?'<img src="'+i.photo_url+'">':`🪑`}</div><div style="flex:1;min-width:0;"><div style="font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:150px;">${i.name}</div><div style="font-size:11px;color:var(--muted);">${i.category||''} · ${daysAgo(i.added_at)}</div><span class="badge badge-${bc(i.status)}">${i.status}</span></div><div style="text-align:right;flex-shrink:0;"><div style="font-size:13px;font-weight:600;color:var(--green);">${fmt(i.price)}</div><div style="font-size:11px;color:var(--muted);">${i.cost&&i.price?pct(i.cost,i.price)+'% margin':''}</div></div></div>`).join('');
 }
 
 // INVENTORY
@@ -596,8 +569,8 @@ function renderInv(){
   const q=(document.getElementById('searchInput').value||'').toLowerCase();
   const items=inventory.filter(i=>(currentFilter==='all'||i.status===currentFilter)&&(!q||i.name.toLowerCase().includes(q)||(i.category||'').toLowerCase().includes(q)));
   const el=document.getElementById('invList');
-  if(!items.length){el.innerHTML='<div class="empty-state"><div class="empty-icon">ð</div><div class="empty-title">Nothing here</div><div class="empty-sub">No items match your filter.</div></div>';return;}
-  el.innerHTML=items.map(i=>`<div class="inv-item" onclick="openItemModal('${i.id}')"><div class="ithumb">${i.photo_url?'<img src="'+i.photo_url+'">':`ðª`}</div><div style="flex:1;min-width:0;"><div style="font-size:14px;font-weight:500;margin-bottom:2px;">${i.name}</div><div style="font-size:11px;color:var(--muted);margin-bottom:5px;">${i.source||''} Â· ${i.category||''}</div><div style="display:flex;gap:7px;align-items:center;"><span style="font-size:12px;color:var(--muted);">Cost ${fmt(i.cost)}</span><span style="font-size:11px;color:var(--muted);">â</span><span style="font-size:13px;font-weight:600;">${fmt(i.price)}</span>${i.cost&&i.price?'<span style="font-size:11px;color:var(--green);font-weight:500;">'+pct(i.cost,i.price)+'%</span>':''}</div></div><span class="badge badge-${bc(i.status)}" style="flex-shrink:0;align-self:flex-start;">${i.status}</span></div>`).join('');
+  if(!items.length){el.innerHTML='<div class="empty-state"><div class="empty-icon">🔍</div><div class="empty-title">Nothing here</div><div class="empty-sub">No items match your filter.</div></div>';return;}
+  el.innerHTML=items.map(i=>`<div class="inv-item" onclick="openItemModal('${i.id}')"><div class="ithumb">${i.photo_url?'<img src="'+i.photo_url+'">':`🪑`}</div><div style="flex:1;min-width:0;"><div style="font-size:14px;font-weight:500;margin-bottom:2px;">${i.name}</div><div style="font-size:11px;color:var(--muted);margin-bottom:5px;">${i.source||''} · ${i.category||''}</div><div style="display:flex;gap:7px;align-items:center;"><span style="font-size:12px;color:var(--muted);">Cost ${fmt(i.cost)}</span><span style="font-size:11px;color:var(--muted);">→</span><span style="font-size:13px;font-weight:600;">${fmt(i.price)}</span>${i.cost&&i.price?'<span style="font-size:11px;color:var(--green);font-weight:500;">'+pct(i.cost,i.price)+'%</span>':''}</div></div><span class="badge badge-${bc(i.status)}" style="flex-shrink:0;align-self:flex-start;">${i.status}</span></div>`).join('');
 }
 
 // ADD ITEM
@@ -617,32 +590,38 @@ function handlePhoto(input){
   reader.readAsDataURL(file);
 }
 
+// === UPDATED: now calls our own Netlify function instead of api.anthropic.com directly ===
 async function analyzePhoto(){
   const inner=document.getElementById('loadingInner');
   inner.style.width='20%';
   setTimeout(()=>inner.style.width='65%',300);
   try{
-    const resp=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:600,messages:[{role:'user',content:[{type:'image',source:{type:'base64',media_type:photoMediaType,data:photoBase64}},{type:'text',text:'You are an expert furniture appraiser for Furnishh, a boutique furniture store in West Jordan Utah. Analyze this furniture photo and respond ONLY with valid JSON no markdown: {"name":"4-6 word product name","category":"Seating or Tables or Storage or Decor or Rugs or Lighting or Other","description":"one warm sentence about this piece","suggestedPrice":000,"condition":"Excellent or Good or Fair","style":"e.g. Mid-century modern, Contemporary, Rustic, Scandinavian, Industrial, Traditional"}'}]}]})});
+    const resp=await fetch('/.netlify/functions/analyze',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({imageBase64:photoBase64, mediaType:photoMediaType})
+    });
     inner.style.width='90%';
-    const data=await resp.json();
-    const raw=data.content.map(c=>c.text||'').join('').replace(/```json|```/g,'').trim();
-    const parsed=JSON.parse(raw.slice(raw.indexOf('{'),raw.lastIndexOf('}')+1));
+    const parsed=await resp.json();
+    if(!resp.ok) throw new Error(parsed.error||'Analysis failed');
     inner.style.width='100%';
+
     // Show review card
     document.getElementById('step-analyzing').style.display='none';
     document.getElementById('step-review').style.display='block';
-    document.getElementById('aiText').textContent=(parsed.style?parsed.style+' Â· ':'')+parsed.description+(parsed.condition?' Â· Condition: '+parsed.condition:'');
+    document.getElementById('aiText').textContent=(parsed.style?parsed.style+' · ':'')+parsed.description+(parsed.condition?' · Condition: '+parsed.condition:'');
     document.getElementById('itemName').value=parsed.name||'';
     if(parsed.suggestedPrice) document.getElementById('itemPrice').value=parsed.suggestedPrice;
     if(parsed.category) document.querySelectorAll('#catG .chip-opt').forEach(c=>c.classList.toggle('selected',c.textContent===parsed.category));
-    // Focus cost field â only thing Lesa needs to fill in
+
+    // Focus cost field — only thing Lesa needs to fill in
     setTimeout(()=>document.getElementById('itemCost').focus(),300);
     calcMargin();
   }catch(e){
     inner.style.width='100%';
     document.getElementById('step-analyzing').style.display='none';
     document.getElementById('step-camera').style.display='block';
-    showToast('Could not analyze photo â try again');
+    showToast('Could not analyze photo — try again');
   }
 }
 
@@ -674,7 +653,7 @@ async function saveItem(){
     const data=await supaReq('POST','/rest/v1/inventory',row);
     const saved=Array.isArray(data)?data[0]:data;
     inventory.unshift(saved);
-    showToast('â '+name+' saved!');
+    showToast('✓ '+name+' saved!');
     resetAdd();renderDash();
   }catch(e){
     showToast('Error: '+e.message);
@@ -706,10 +685,9 @@ function renderExp(){
   document.getElementById('exp-count').textContent=thisMonth.length+' expenses';
   document.getElementById('exp-year').textContent=fmt(thisYear.reduce((s,e)=>s+(e.amount||0),0));
   const el=document.getElementById('expList');
-  if(!expenses.length){el.innerHTML='<div class="empty-state"><div class="empty-icon">ð¸</div><div class="empty-title">No expenses yet</div><div class="empty-sub">Tap Add expense to log rent, marketing, supplies, and more.</div></div>';return;}
-  el.innerHTML=expenses.map(e=>`<div class="exp-item" onclick="deleteExpense('${e.id}')"><div><div style="font-size:14px;font-weight:500;margin-bottom:2px;">${e.description}</div><div style="font-size:11px;color:var(--muted);">${e.category} Â· ${new Date(e.expense_date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</div></div><div class="exp-amount">${fmt(e.amount)}</div></div>`).join('');
+  if(!expenses.length){el.innerHTML='<div class="empty-state"><div class="empty-icon">💸</div><div class="empty-title">No expenses yet</div><div class="empty-sub">Tap Add expense to log rent, marketing, supplies, and more.</div></div>';return;}
+  el.innerHTML=expenses.map(e=>`<div class="exp-item" onclick="deleteExpense('${e.id}')"><div><div style="font-size:14px;font-weight:500;margin-bottom:2px;">${e.description}</div><div style="font-size:11px;color:var(--muted);">${e.category} · ${new Date(e.expense_date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'})}</div></div><div class="exp-amount">${fmt(e.amount)}</div></div>`).join('');
 }
-
 function openExpModal(){
   document.getElementById('expDate').value=new Date().toISOString().split('T')[0];
   document.getElementById('expDesc').value='';
@@ -718,7 +696,6 @@ function openExpModal(){
   document.getElementById('expModal').classList.add('show');
 }
 function closeExpModal(e){if(e.target===document.getElementById('expModal'))document.getElementById('expModal').classList.remove('show');}
-
 async function saveExpense(){
   const desc=document.getElementById('expDesc').value.trim();
   const amount=parseFloat(document.getElementById('expAmount').value);
@@ -731,12 +708,11 @@ async function saveExpense(){
     const saved=Array.isArray(data)?data[0]:data;
     expenses.unshift(saved);
     document.getElementById('expModal').classList.remove('show');
-    showToast('â Expense saved!');
+    showToast('✓ Expense saved!');
     renderExp();renderDash();
   }catch(e){showToast('Error: '+e.message);}
   finally{btn.disabled=false;btn.textContent='Save expense';}
 }
-
 async function deleteExpense(id){
   if(!confirm('Remove this expense?'))return;
   await supaReq('DELETE',`/rest/v1/expenses?id=eq.${id}`);
@@ -757,10 +733,10 @@ function renderPL(){
   const netProfit=grossProfit-totalExp;
   document.getElementById('pl-rev').textContent=fmt(revenue);
   document.getElementById('pl-sold').textContent=soldItems.length;
-  document.getElementById('pl-avg').textContent=soldItems.length?fmt(Math.round(revenue/soldItems.length)):'â';
+  document.getElementById('pl-avg').textContent=soldItems.length?fmt(Math.round(revenue/soldItems.length)):'—';
   document.getElementById('pl-cogs').textContent=fmt(cogs);
   document.getElementById('pl-gp').textContent=fmt(grossProfit);
-  document.getElementById('pl-gm').textContent=revenue?grossMargin+'%':'â';
+  document.getElementById('pl-gm').textContent=revenue?grossMargin+'%':'—';
   document.getElementById('pl-exp').textContent=fmt(totalExp);
   document.getElementById('pl-net').textContent=fmt(netProfit);
   document.getElementById('pl-net').style.color=netProfit>=0?'var(--green)':'var(--red)';
@@ -778,22 +754,21 @@ function renderPL(){
 function openItemModal(id){
   const item=inventory.find(i=>i.id===id);if(!item)return;
   currentItemId=id;
-  document.getElementById('mImg').innerHTML=item.photo_url?'<img src="'+item.photo_url+'">':'ðª';
+  document.getElementById('mImg').innerHTML=item.photo_url?'<img src="'+item.photo_url+'">':'🪑';
   document.getElementById('mName').textContent=item.name;
-  document.getElementById('mAdded').textContent='Added '+daysAgo(item.added_at)+(item.source?' Â· '+item.source:'');
-  const m=item.cost&&item.price?pct(item.cost,item.price)+'%':'â';
+  document.getElementById('mAdded').textContent='Added '+daysAgo(item.added_at)+(item.source?' · '+item.source:'');
+  const m=item.cost&&item.price?pct(item.cost,item.price)+'%':'—';
   document.getElementById('mDetails').innerHTML=`
     <div class="detail-row"><span class="dkey">Status</span><span class="dval"><span class="badge badge-${bc(item.status)}">${item.status}</span></span></div>
     <div class="detail-row"><span class="dkey">Cost paid</span><span class="dval">${fmt(item.cost)}</span></div>
     <div class="detail-row"><span class="dkey">Sell price</span><span class="dval">${fmt(item.price)}</span></div>
     <div class="detail-row"><span class="dkey">Gross margin</span><span class="dval" style="color:var(--green);">${m}</span></div>
-    <div class="detail-row"><span class="dkey">Category</span><span class="dval">${item.category||'â'}</span></div>
+    <div class="detail-row"><span class="dkey">Category</span><span class="dval">${item.category||'—'}</span></div>
     ${item.notes?'<div class="detail-row"><span class="dkey">Notes</span><span class="dval">'+item.notes+'</span></div>':''}
   `;
   document.getElementById('itemModal').classList.add('show');
 }
 function closeItemModal(e){if(e.target===document.getElementById('itemModal'))document.getElementById('itemModal').classList.remove('show');}
-
 async function cycleStatus(){
   const item=inventory.find(i=>i.id===currentItemId);if(!item)return;
   const s=['In stock','On hold','Sold'];
@@ -801,11 +776,10 @@ async function cycleStatus(){
   const update={status:newStatus,sold_at:newStatus==='Sold'?new Date().toISOString():null};
   await supaReq('PATCH',`/rest/v1/inventory?id=eq.${currentItemId}`,update);
   Object.assign(item,update);
-  showToast('Status â '+newStatus);
+  showToast('Status → '+newStatus);
   document.getElementById('itemModal').classList.remove('show');
   renderDash();renderInv();
 }
-
 async function deleteItem(){
   if(!confirm('Remove this item?'))return;
   await supaReq('DELETE',`/rest/v1/inventory?id=eq.${currentItemId}`);
@@ -819,3 +793,4 @@ checkSession();
 </script>
 </body>
 </html>
+Move Anthropic API call to Netlify function
